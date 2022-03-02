@@ -29,6 +29,7 @@ export const RestaurantsScreen: React.FC = () => {
     <SafeAreaView>
       <HeaderComponent version={appVersion} />
       <FlatList
+        keyExtractor={item => item.name}
         data={restaurants}
         renderItem={renderItem}
         showsVerticalScrollIndicator={false}
